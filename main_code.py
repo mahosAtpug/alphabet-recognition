@@ -47,7 +47,7 @@ while (True):
         im_pil = Image.fromarray(roi)
         image_bw = im_pil.convert("L")
 
-        image_bw_resized = image_bw.resize((28 , 28) , Image.ANTIALIAS)
+        image_bw_resized = image_bw.resize((22 , 30) , Image.ANTIALIAS)
         image_bw_resized_inverted = PIL.ImageOps.invert(image_bw_resized)
         pixel_filter = 20
         min_pixel = np.percentile(image_bw_resized_inverted , pixel_filter)
